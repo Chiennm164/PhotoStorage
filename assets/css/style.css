@@ -1,0 +1,490 @@
+:root {
+    --text-color: ;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 15.6px;
+}
+
+.app {
+    min-width: 1200px;
+    background: url('/assets/image/background.jpg') center / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+/*  MENU  CSS*/
+.menu {
+    width: 30%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear;
+
+}
+
+.menu-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 30px 0 30px;
+}
+
+.menu-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background: url("/assets/image/avatar.jpg") center /cover no-repeat;
+}
+
+.menu-avatar:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2 linear;
+}
+
+.menu-title {
+    width: 100%;
+    color: #fff;
+    padding: 35px 0 25px 0;
+}
+
+.menu-title p {
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.menu-description {
+    color: #fff;
+    padding: 15px 0;
+}
+
+.menu-description p {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.menu-navbar {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    justify-content: flex-end;
+}
+
+.menu-navbar a {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.menu-navbar a:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s linear;
+}
+
+.menu-navbar__link {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-navbar__link-a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-navbar__link-b {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.menu-navbar__link-a,
+.menu-navbar__link-b {
+    padding-bottom: 10px;
+}
+
+.menu-navbar__link-a a,
+.menu-navbar__link-b a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-navbar__link-b a {
+    width: 48%;
+}
+
+.menu-navbar__link-items {
+    padding: 5px 6px;
+}
+
+.menu-navbar__about {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-navbar__about-items {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.menu-navbar__about a {
+    padding: 15px 0;
+    margin: 0px 0 10px 0px;
+}
+
+.menu-navbar__search {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #fff;
+
+}
+
+.menu-navbar__search-item {
+    width: 100%;
+    height: 40px;
+    padding: 10px 0 10px 4px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.btn-search:hover {
+    opacity: 0.6;
+}
+
+.btn-search {
+    height: 40px;
+    width: 50px;
+    border-left: 2px solid #fff;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* CONTENT CSS */
+
+
+.content {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+.content__items .ti-camera {
+    position: absolute;
+    top: 5px;
+    font-size: 16px;
+    right: 5px;
+}
+
+.delete-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    accent-color: #fff;
+}
+
+.checkbox-hide {
+    visibility: hidden;
+}
+
+.content-coursel {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.content__items {
+    width: 25%;
+    color: #fff;
+}
+
+.group {
+    position: relative;
+    display: flex;
+    height: 261px;
+    margin: 5px;
+    font-size: 12px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.content__items:hover {
+    cursor: zoom-in;
+}
+
+.content__items:hover .content__items-wrap {
+    display: block;
+}
+
+.content__items-wrap {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.content__items-hashtag {
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+
+}
+
+.content__items-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+
+}
+
+.content__items-time-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+}
+
+.like {
+    font-size: 10px;
+}
+
+.like span:hover {
+    color: red;
+}
+
+.content__items-time span {
+    font-size: 10px;
+    padding-right: 6px;
+}
+
+/* ZOOM CSS */
+
+.transform-left {
+    transform: translateX(-100%);
+}
+
+.transform-right {
+    transform: translateX(100%);
+}
+
+.zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('/assets/image/bg-zoom.jpg') center / cover no-repeat;
+    overflow: hidden;
+    transition: all 0.4s 0.1s linear;
+    transform: translateX(0);
+}
+
+.zoom-image {
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.zoom-image img {
+    height: 60%;
+    cursor: pointer;
+    object-fit: contain;
+    border: 9px solid #fff;
+    border-radius: 7px;
+
+}
+
+.zoom-close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    transition: all 0.4s 0.1s linear;
+    font-size: 32px;
+    opacity: 0.9;
+}
+
+.zoom-hashtag {
+    width: 100%;
+    text-align: left;
+    padding: 30px 0;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.zoom-hashtag span {
+    line-height: 25px;
+}
+
+.zoom-hide {
+    visibility: hidden;
+    transform: translateX(100%);
+    height: 0;
+}
+
+/*  ADD image */
+.add-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2px;
+}
+
+.add-image-wrap {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    opacity: 1;
+    border: 2px solid #fff;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.add-image-header {
+    width: 100%;
+    display: flex;
+
+}
+
+.add-image-header input {
+    width: 100%;
+    height: 26px;
+    border: 1px solid #ccc;
+    outline-color: #686653;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+.add-image-header-wrap {
+    flex: 1;
+}
+
+.add-image-btn-add {
+    margin-left: 10px;
+    width: 15%;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.add-image-btn-add:hover {
+    background-color: #686653;
+    transition: all 0.3s linear;
+    color: #fff;
+}
+
+.add-image-hashtag {
+    margin-top: 8px;
+}
+
+.add-image-body {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    min-height: 400px;
+}
+
+.add-image-body img {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.add-hide {
+    visibility: hidden;
+    height: 0;
+}
+
+.add-image-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.add-image-header-wrap input::placeholder {
+    color: #ccc;
+}
